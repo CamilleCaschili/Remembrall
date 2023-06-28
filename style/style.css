@@ -27,3 +27,11 @@ button:hover {
 a {
     color: white;
 }
+
+#createButton, #backButton {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
