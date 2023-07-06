@@ -30,10 +30,20 @@ a {
 
 #createButton, #backButton {
     position: fixed;
-    bottom: 10px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
+}
+
+#createReminder {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    height: 75px;
+    overflow-y: auto;
 }
 
 .card {
