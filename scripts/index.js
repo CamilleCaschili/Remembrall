@@ -6,9 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
   if (reminders) {
     for (var i = 0; i < reminders.length; i++) {
       var reminder = reminders[i];
-      var li = document.createElement("li");
-      li.textContent = reminder;
-      reminderList.appendChild(li);
+      var card = document.createElement("div");
+      card.classList.add("card");
+      var title = document.createElement("h2");
+      title.textContent = reminder.title;
+      var date = document.createElement("p");
+      date.textContent = reminder.date;
+      card.appendChild(title);
+      card.appendChild(date);
+      reminderList.appendChild(card);
     }
   }
 
