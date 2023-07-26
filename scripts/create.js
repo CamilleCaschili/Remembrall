@@ -15,12 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
       title: titleReminder.value,
       date: dateTimeReminder.value
     };
-    reminderArray.push(reminder);
-    titleReminder.value = "";
-    dateTimeReminder.value = "";
-    console.log(reminderArray);
-    localStorage.setItem("reminderArray", JSON.stringify(reminderArray));
-    alert("Reminder added!");
+    if (reminder.title != "" && reminder.date != "") {
+      reminderArray.push(reminder);
+      titleReminder.value = "";
+      dateTimeReminder.value = "";
+      localStorage.setItem("reminderArray", JSON.stringify(reminderArray));
+      alert("Reminder added!");
+    } else {
+      alert("Please fill out all fields.");
+    };
   });
 
   clearButton.addEventListener("click", function () {
